@@ -18,7 +18,7 @@ A minimal, SEO-ready Astro template with Tailwind CSS integration to kickstart y
 
 1. Create a new project using this template:
    ```bash
-   npm create astro@latest -- --template SofiDevO/plantilla-astro
+   npm create astro  -- --template SofiDevO/pantilla-astro
    ```
 
 2. Install dependencies:
