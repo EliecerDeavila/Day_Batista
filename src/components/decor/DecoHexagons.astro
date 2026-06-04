@@ -1,0 +1,33 @@
+<!--
+  Hexagonal grid pattern — industrial honeycomb motif.
+  Drop into any <section style="position:relative;overflow:hidden;">
+-->
+<div class="deco-hex" aria-hidden="true">
+  <svg width="100%" height="100%" preserveAspectRatio="none"
+       viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="hex" width="40" height="69.282" patternUnits="userSpaceOnUse"
+               patternTransform="scale(1.5)">
+        <path d="M40 17.32L20 5.77 0 17.32v23.1l20 11.55 20-11.55z"
+              fill="none" stroke="var(--accent)" stroke-width="0.8"/>
+        <path d="M20 5.77V0M0 17.32h-10M40 17.32h10M20 40.42v15"
+              fill="none" stroke="var(--accent-2)" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#hex)"/>
+  </svg>
+</div>
+
+<style>
+  .deco-hex {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0.07;
+  }
+  .deco-hex svg {
+    width: 100%;
+    height: 100%;
+  }
+</style>

@@ -1,0 +1,40 @@
+<!--
+  Additional decorative circles — like existing deco-circle but more variety.
+  Drop into any <section style="position:relative;overflow:hidden;">
+-->
+<div class="deco-circles-extras" aria-hidden="true">
+  <div class="deco-cx deco-cx-1"></div>
+  <div class="deco-cx deco-cx-2"></div>
+  <div class="deco-cx deco-cx-3"></div>
+</div>
+
+<style>
+  .deco-circles-extras {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .deco-cx {
+    position: absolute;
+    border-radius: 50%;
+  }
+  .deco-cx-1 {
+    width: 180px; height: 180px;
+    top: 20%; left: -60px;
+    border: 1px solid var(--warning);
+    opacity: 0.1;
+  }
+  .deco-cx-2 {
+    width: 100px; height: 100px;
+    bottom: 15%; right: 10%;
+    background: var(--accent-soft);
+    opacity: 0.15;
+  }
+  .deco-cx-3 {
+    width: 240px; height: 240px;
+    top: -60px; right: 20%;
+    border: 2px dashed var(--accent-2);
+    opacity: 0.08;
+  }
+</style>

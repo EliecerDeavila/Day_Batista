@@ -1,23 +1,11 @@
 ---
-import Layout from "../layout/Layout.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Not found 🦝" description="Página no encontrada">
-  <h1>404 - Página no encontrada</h1>
-
-  <a href="/">Volver</a>
+<Layout title="404 — Página no encontrada" description="La página que buscas no existe.">
+  <main class="section" style="min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:var(--gap-md);">
+    <h1 class="h1" style="font-size:clamp(80px,15vw,140px);line-height:1;background:linear-gradient(135deg,var(--fg),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">404</h1>
+    <p class="lead">Página no encontrada</p>
+    <a href="/" class="btn btn-primary">Volver al inicio</a>
+  </main>
 </Layout>
-
-<style>
-  h1 {
-    text-align: center;
-  }
-  a {
-    display: block;
-    text-align: center;
-    background: rebeccapurple;
-    color: #fff;
-    padding: 1rem;
-    text-decoration: none;
-  }
-</style>

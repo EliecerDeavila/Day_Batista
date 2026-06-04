@@ -1,0 +1,39 @@
+---
+import Cursos from '../components/Cursos.astro';
+---
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow">Formación</p>
+      <h2 class="h2">Educación formal</h2>
+      <p>Titulaciones técnicas que respaldan mi perfil profesional.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:var(--gap-md);">
+      <div class="cert-card reveal">
+        <div class="badge-3d" style="width:56px;height:56px;">
+          <div class="badge-face" style="background:linear-gradient(145deg,var(--accent),var(--accent-2));color:var(--surface)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+          </div>
+        </div>
+        <div class="cert-info">
+          <h3>Tecnólogo en HSEQ</h3>
+          <p>Gestión integrada de la calidad, medio ambiente, seguridad y salud ocupacional</p>
+          <span class="meta">Servicio Nacional de Aprendizaje — SENA · 2017 — 2019</span>
+        </div>
+      </div>
+      <div class="cert-card reveal reveal-delay-1">
+        <div class="badge-3d" style="width:56px;height:56px;">
+          <div class="badge-face" style="background:linear-gradient(145deg,var(--accent-2),var(--accent));color:var(--surface)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path></svg>
+          </div>
+        </div>
+        <div class="cert-info">
+          <h3>Auxiliar de Enfermería</h3>
+          <p>Formación en primeros auxilios y atención a la salud</p>
+          <span class="meta">Corporación Educativa Elyon Jhiret · 2013 — 2015</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <Cursos />
+</section>

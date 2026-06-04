@@ -1,10 +1,73 @@
 ---
-import Layout from "../layout/Layout.astro";
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Concept from '../components/Concept.astro';
+import Skills from '../components/Skills.astro';
+import Stats from '../components/Stats.astro';
+import Timeline from '../components/Timeline.astro';
+import Certifications from '../components/Certifications.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
+
 ---
-
-
-<Layout title="Home" description="Bienvenidos a mi blog con astro">
-  <main class="flex flex-col w-full justify-center items-center h-screen">
-
-  </main>
+<Layout title="Day Diana Batista - Profesional HSEQ">
+  <Header />
+  <Hero />
+  <Concept />
+  <Skills />
+  <Stats />
+  <Timeline />
+  <Certifications />
+  <CTA />
+  <Footer />
 </Layout>
+
+<style>
+  .decor-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--gap-lg);
+  }
+  .decor-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform 0.3s var(--spring), box-shadow 0.3s var(--spring);
+  }
+  .decor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px color-mix(in oklch, var(--fg) 8%, transparent);
+  }
+  .decor-preview {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    display: grid;
+    place-items: center;
+  }
+  .decor-info {
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: var(--fs-meta);
+  }
+  .decor-info strong {
+    font-size: var(--fs-body);
+    font-weight: 600;
+  }
+  .decor-info span {
+    color: var(--muted);
+  }
+  .decor-tag {
+    display: inline-flex;
+    align-self: flex-start;
+    padding: 2px 10px;
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 4px;
+  }
+</style>

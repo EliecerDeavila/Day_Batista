@@ -1,0 +1,28 @@
+<!--
+  Hazard warning stripes — diagonal yellow/black pattern.
+  Drop into any <section style="position:relative;overflow:hidden;">
+-->
+<div class="deco-hazard" aria-hidden="true">
+  <div class="deco-hazard-inner"></div>
+</div>
+
+<style>
+  .deco-hazard {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0.06;
+  }
+  .deco-hazard-inner {
+    position: absolute;
+    inset: -40px;
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--warning) 0px,
+      var(--warning) 12px,
+      transparent 12px,
+      transparent 24px
+    );
+  }
+</style>
