@@ -4,8 +4,7 @@
     <div class="cta-card reveal">
       <h2 class="h2">Hablemos de seguridad con estilo</h2>
       <p>Déjame tus datos y te respondo a la brevedad.</p>
-      <form class="contact-form" action="/" name="contacto" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contacto" />
+      <form class="contact-form" id="form-contacto">
         <div class="form-group">
           <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" required />
         </div>
@@ -28,13 +27,20 @@
 </section>
 
 <script>
-  const form = document.querySelector('.contact-form');
+  const form = document.getElementById('form-contacto');
   const success = document.getElementById('form-success');
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const data = new FormData(form);
-      await fetch('/', { method: 'POST', body: data });
+      const data = {
+        nombre: form.nombre.value,
+        correo: form.correo.value,
+        mensaje: form.mensaje.value,
+      };
+      await fetch('/.netlify/functions/enviar', {
+        method: 'POST',
+        body: JSON.stringify(data),
+      });
       form.style.display = 'none';
       success.hidden = false;
       setTimeout(() => {
