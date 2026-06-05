@@ -37,10 +37,11 @@
         correo: form.correo.value,
         mensaje: form.mensaje.value,
       };
-      await fetch('/.netlify/functions/enviar', {
+      const res = await fetch('/.netlify/functions/enviar', {
         method: 'POST',
         body: JSON.stringify(data),
       });
+      if (!res.ok) throw new Error('Error en el servidor');
       form.style.display = 'none';
       success.hidden = false;
       setTimeout(() => {
