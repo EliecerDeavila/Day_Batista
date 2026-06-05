@@ -17,9 +17,31 @@
         </div>
         <button type="submit" class="btn">Enviar mensaje</button>
       </form>
+      <div id="form-success" hidden>
+        <p style="color:var(--surface);font-weight:600;font-size:18px;">✓ Mensaje enviado con éxito. Te responderé pronto.</p>
+      </div>
       <div style="margin-top:var(--gap-lg);border-top:1px solid color-mix(in oklch, var(--surface) 20%, transparent);padding-top:var(--gap-lg);">
         <a href="/Day%20Batista.pdf" class="btn" target="_blank" rel="noopener noreferrer" download>Descargar CV</a>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  const form = document.querySelector('.contact-form');
+  const success = document.getElementById('form-success');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      await fetch('/', { method: 'POST', body: data });
+      form.style.display = 'none';
+      success.hidden = false;
+      setTimeout(() => {
+        success.hidden = true;
+        form.reset();
+        form.style.display = '';
+      }, 4000);
+    });
+  }
+</script>
